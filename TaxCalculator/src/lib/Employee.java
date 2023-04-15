@@ -5,6 +5,7 @@ import java.time.Month;
 import java.util.LinkedList;
 import java.util.List;
 
+
 public class Employee {
 
 	private enum jenisGender{
@@ -32,10 +33,9 @@ public class Employee {
 	private List<String> childNames;
 	private List<String> childIdNumbers;
 	
-	public Employee(String employeeId, String firstName, String lastName, String idNumber, String address, Date tglJoined, boolean isForeigner, jenisGender gender) {
+	public Employee(String employeeId, String employeeName, String idNumber, String address, Date tglJoined, boolean isForeigner, jenisGender gender) {
 		this.employeeId = employeeId;
-		this.firstName = firstName;
-		this.lastName = lastName;
+		this.employeeName = employeeName;
 		this.idNumber = idNumber;
 		this.address = address;
 		this.tglJoined = tglJoined;
