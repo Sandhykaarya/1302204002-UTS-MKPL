@@ -34,6 +34,7 @@ public class Employee extends information{
 	private int annualDeductible;
 	
 	private User spouse;
+	
 
 	private List<String> childNames;
 	private List<String> childIdNumbers;
