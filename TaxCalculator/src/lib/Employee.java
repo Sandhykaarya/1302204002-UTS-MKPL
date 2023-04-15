@@ -5,9 +5,6 @@ import java.time.Month;
 import java.util.LinkedList;
 import java.util.List;
 
-<<<<<<< Updated upstream
-public class Employee {
-=======
 public class information extends User{
 	private String employeeId;
 	private String address;
@@ -19,15 +16,14 @@ public class User{
 	private String idNumber;
 }
 
-public class Employee extends User{
->>>>>>> Stashed changes
+public class Employee extends information{
 
 	private enum jenisGender{
 		Lakilaki,
 		Perempuan
 	}
 
-	private User employee;
+	private information employee;
 	
 	private Date tglJoined;
 	
@@ -38,18 +34,14 @@ public class Employee extends User{
 	private int annualDeductible;
 	
 	private User spouse;
+	
 
 	private List<String> childNames;
 	private List<String> childIdNumbers;
 	
-	public Employee(String employeeId, String firstName, String lastName, String idNumber, String address, Date tglJoined, boolean isForeigner, jenisGender gender) {
-		this.employeeId = employeeId;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.idNumber = idNumber;
-		this.address = address;
+	public Employee(information employee, Date tglJoined,  jenisGender gender) {
+		this.employee = employee;
 		this.tglJoined = tglJoined;
-		this.isForeigner = isForeigner;
 		this.gender = gender;
 		
 		childNames = new LinkedList<String>();
