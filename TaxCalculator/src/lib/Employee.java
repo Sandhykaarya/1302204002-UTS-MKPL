@@ -5,41 +5,42 @@ import java.time.Month;
 import java.util.LinkedList;
 import java.util.List;
 
+public class information extends User{
+	private String employeeId;
+	private String address;
+	private boolean isForeigner;
+}
 
-public class Employee {
+public class User{
+	private String name;
+	private String idNumber;
+}
+
+public class Employee extends information{
 
 	private enum jenisGender{
 		Lakilaki,
 		Perempuan
 	}
 
-	private String employeeId;
-	private String employeeName;
-	private String idNumber;
-	private String address;
+	private information employee;
 	
 	private Date tglJoined;
 	
-	private boolean isForeigner;
 	private jenisGender gender;
 	
 	private int monthlySalary;
 	private int otherMonthlyIncome;
 	private int annualDeductible;
 	
-	private String spouseName;
-	private String spouseIdNumber;
+	private User spouse;
 
 	private List<String> childNames;
 	private List<String> childIdNumbers;
 	
-	public Employee(String employeeId, String employeeName, String idNumber, String address, Date tglJoined, boolean isForeigner, jenisGender gender) {
-		this.employeeId = employeeId;
-		this.employeeName = employeeName;
-		this.idNumber = idNumber;
-		this.address = address;
+	public Employee(information employee, Date tglJoined,  jenisGender gender) {
+		this.employee = employee;
 		this.tglJoined = tglJoined;
-		this.isForeigner = isForeigner;
 		this.gender = gender;
 		
 		childNames = new LinkedList<String>();
