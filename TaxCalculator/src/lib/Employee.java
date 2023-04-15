@@ -5,29 +5,39 @@ import java.time.Month;
 import java.util.LinkedList;
 import java.util.List;
 
+<<<<<<< Updated upstream
 public class Employee {
+=======
+public class information extends User{
+	private String employeeId;
+	private String address;
+	private boolean isForeigner;
+}
+
+public class User{
+	private String name;
+	private String idNumber;
+}
+
+public class Employee extends User{
+>>>>>>> Stashed changes
 
 	private enum jenisGender{
 		Lakilaki,
 		Perempuan
 	}
 
-	private String employeeId;
-	private String employeeName;
-	private String idNumber;
-	private String address;
+	private User employee;
 	
 	private Date tglJoined;
 	
-	private boolean isForeigner;
 	private jenisGender gender;
 	
 	private int monthlySalary;
 	private int otherMonthlyIncome;
 	private int annualDeductible;
 	
-	private String spouseName;
-	private String spouseIdNumber;
+	private User spouse;
 
 	private List<String> childNames;
 	private List<String> childIdNumbers;
