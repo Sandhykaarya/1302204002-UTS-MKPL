@@ -65,7 +65,7 @@ public class Employee extends information{
 
 	public int total(boolean foreginer, int grade){
 		if(foreginer){
-			return salary(grade) * 1.5;
+			return "avc";
 		}else{
 			return salary(grade);
 		}
